@@ -9,5 +9,4 @@ after_success:
 deploy:
   provider: heroku
   api_key: 3b2dc8a3-67a0-47bc-9783-d05b051a6eea
-  app:
-    production: ciworkshop
+  app: ciworkshop
