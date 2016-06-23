@@ -36,5 +36,6 @@ public class CIWorkshopTest {
     public void shouldReturn200() throws Exception {
         // Then
         mockMvc.perform(get("/")).andExpect(status().is(200));
+        mockMvc.perform(get("/books")).andExpect(status().is(200));
     }
 }
