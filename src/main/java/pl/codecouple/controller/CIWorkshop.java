@@ -2,9 +2,11 @@ package pl.codecouple.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 import pl.codecouple.domain.Book;
 import pl.codecouple.repository.BookRepository;
 
@@ -23,15 +25,18 @@ public class CIWorkshop {
         this.bookRepository = bookRepository;
     }
 
-    @RequestMapping("/books")
-    public List<Book> getBooks(){
-        bookRepository.save(new Book("Siema ejdzi!"));
-        return bookRepository.findAll();
-    }
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(){
+    @RequestMapping("/addBook")
+    public String addBook(){
+        bookRepository.save(new Book("Test"));
         return "index";
     }
+
+    @RequestMapping("/")
+    public ModelAndView getBooks(ModelAndView modelAndView){
+        modelAndView.addObject("books", bookRepository.findAll());
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
 
 }
