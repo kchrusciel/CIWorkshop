@@ -25,7 +25,7 @@ public class CIWorkshop {
 
     @RequestMapping("/books")
     public List<Book> getBooks(){
-//        bookRepository.save(new Book("Jan nowak"));
+        bookRepository.save(new Book("Siema ejdżi :*"));
         return bookRepository.findAll();
     }
 
