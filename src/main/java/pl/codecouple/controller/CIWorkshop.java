@@ -28,7 +28,7 @@ public class CIWorkshop {
     @RequestMapping("/addBook")
     public String addBook(){
         bookRepository.save(new Book("Test"));
-        return "index";
+        return "added";
     }
 
     @RequestMapping("/")

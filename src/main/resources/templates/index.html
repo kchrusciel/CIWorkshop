@@ -1,34 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="DevBooks"/>
-    <meta name="author" content="CodeCouple"/>
-    <title>DevBooks</title>
-
-    <!--<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />-->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
+    <link href='css/style.css' rel='stylesheet' type='text/css'/>
 </head>
-<body>
-<div class="container">
-    <div layout:fragment="content"></div>
-</div>
+<body >
+<div id="container">
+    <div id="box">
+        <div id="cooking">
+            <div id="top">
+                <div id="bubbles">
+                    <div id="bubble" class="first"></div>
+                    <div id="bubblerounded"></div>
+                    <div id="bubble"></div>
+                    <div id="bubblerounded"></div>
+                </div>
+                <div id="topofpot">
+                </div>
+            </div>
+            <div id="pot">
 
-<footer class="footer">
-    <div class="container">
-        <table>
-            <tr data-th-each="book : ${books}">
-                <td data-th-text="${book.topic}">...</td>
-            </tr>
-        </table>
-        <p class="text-muted text-center">&copy; 2016 DevBooks By Krzysztof Chruściel</p>
+            </div>
+        </div>
+        <div id="flames">
+            <div id="flame"></div>
+            <div id="flameBig"></div>
+            <div id="flame"></div>
+        </div>
+        <div id="cook"/>
     </div>
-</footer>
-
+    <h1>--- FoodSharing ---</h1>
+</div>
 </body>
 </html>
