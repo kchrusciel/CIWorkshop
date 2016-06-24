@@ -3,6 +3,10 @@ language: java
 jdk:
     - oraclejdk8
 
+cache:
+  directories:
+  - $HOME/.m2
+
 after_success:
     - python <(curl -s https://raw.githubusercontent.com/TouK/sputnik-ci/master/sputnik-ci.py)
     
